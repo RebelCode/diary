@@ -154,5 +154,20 @@ abstract class RangeRuleAbstract implements RuleInterface
         return $this;
     }
     
+    /**
+     * {@inheritdoc}
+     * 
+     * @param \Aventura\Diary\DateTime\Period\PeriodInterface $period The period to check.
+     * @return boolean <b>True</b> if the period obeys the rule, <b>false</b> if not.
+     */
+    public function obeys(\Aventura\Diary\DateTime\Period\PeriodInterface $period)
+    {
+        return $this->_obeys($period) && !$this->isNegated();
+    }
     
+    /**
+     * Internal obeys method for overriding by subclasses.
+     */
+    abstract protected function _obeys(\Aventura\Diary\DateTime\Period\PeriodInterface $period);
+
 }
