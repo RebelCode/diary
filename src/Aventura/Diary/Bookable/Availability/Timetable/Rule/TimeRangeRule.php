@@ -24,7 +24,8 @@ class TimeRangeRule extends RangeRuleAbstract
         $this->setLower($startTime)
                 ->setUpper($endTime)
                 ->setLowerInclusive(true)
-                ->setUpperInclusive(false);
+                ->setUpperInclusive(false)
+                ->setNegation(false);
     }
 
     /**

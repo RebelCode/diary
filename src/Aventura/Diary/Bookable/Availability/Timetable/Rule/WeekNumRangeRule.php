@@ -24,7 +24,8 @@ class WeekNumRangeRule extends RangeRuleAbstract
         $this->setLower($lower)
                 ->setUpper($upper)
                 ->setLowerInclusive(true)
-                ->setUpperInclusive(true);
+                ->setUpperInclusive(true)
+                ->setNegation(false);
     }
     
     /**

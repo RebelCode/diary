@@ -25,7 +25,8 @@ class DateTimeRangeRule extends RangeRuleAbstract
         $this->setLower($lower)
                 ->setUpper($upper)
                 ->setLowerInclusive(true)
-                ->setUpperInclusive(false);
+                ->setUpperInclusive(false)
+                ->setNegation(false);
     }
 
     /**
