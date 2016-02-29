@@ -54,7 +54,19 @@ class DotwTimeRangeRule implements RuleInterface
     {
         return $this->_timeRangeRule;
     }
-
+    
+    /**
+     * Sets the negation for this rule.
+     * 
+     * @param boolean $negation <b>True</b> to negate the rule, <b>false</b> for not negation.
+     */
+    public function setNegation($negation)
+    {
+        $this->getDotwRangeRule()->setNegation($negation);
+        $this->getTimeRangeRule()->setNegation($negation);
+        return $this;
+    }
+    
     /**
      * {@inheritdoc}
      * 
