@@ -39,6 +39,13 @@ abstract class RangeRuleAbstract implements RuleInterface
     protected $_upperInclusive;
 
     /**
+     * Negation flag.
+     * 
+     * @var boolean
+     */
+    protected $_negation;
+    
+    /**
      * Gets the range lower value.
      * 
      * @return mixed The range lower value.
@@ -76,6 +83,16 @@ abstract class RangeRuleAbstract implements RuleInterface
     public function isUpperInclusive()
     {
         return $this->_upperInclusive;
+    }
+    
+    /**
+     * Gets whether or not the rule is negated.
+     * 
+     * @return boolean <b>True</b> if the rule is negated, <b>false</b> otherwise.
+     */
+    public function isNegated()
+    {
+        return $this->_negation;
     }
 
     /**
@@ -126,4 +143,16 @@ abstract class RangeRuleAbstract implements RuleInterface
         return $this;
     }
 
+    /**
+     * Sets the negation for this rule.
+     * 
+     * @param boolean $negation <b>True</b> to negate the rule, <b>false</b> for not negation.
+     */
+    public function setNegation($negation)
+    {
+        $this->_negation = $negation;
+        return $this;
+    }
+    
+    
 }
