@@ -34,7 +34,7 @@ class DateTimeRangeRule extends RangeRuleAbstract
      * @param PeriodInterface $period The period to check.
      * @return boolean <b>True</b> if the period obeys the rule, <b>false</b> otherwise.
      */
-    public function obeys(PeriodInterface $period)
+    protected function _obeys(PeriodInterface $period)
     {
         return $period->getStart()->isAfter($this->getLower(), $this->isLowerInclusive()) &&
                 $period->getEnd()->isBefore($this->getUpper(), $this->isUpperInclusive());

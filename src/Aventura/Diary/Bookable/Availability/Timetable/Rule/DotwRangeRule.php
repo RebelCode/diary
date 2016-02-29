@@ -30,7 +30,7 @@ class DotwRangeRule extends RangeRuleAbstract
      * @param PeriodInterface $period The period to check.
      * @return boolean <b>True</b> if the period obeys this rule, <b>false</b> otherwise.
      */
-    public function obeys(PeriodInterface $period)
+    protected function _obeys(PeriodInterface $period)
     {
         $d1 = $this->getLower();
         $d2 = $this->getUpper();

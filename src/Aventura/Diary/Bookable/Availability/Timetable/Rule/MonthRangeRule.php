@@ -32,7 +32,7 @@ class MonthRangeRule extends RangeRuleAbstract
      * @param PeriodInterface $period The period to check.
      * @return boolean <b>True</b> if the period obeys the rule, <b>false</b> otherwise.
      */
-    public function obeys(PeriodInterface $period)
+    protected function _obeys(PeriodInterface $period)
     {
         $m1 = $this->getLower();
         $m2 = $this->getUpper();

@@ -34,7 +34,7 @@ class WeekNumRangeRule extends RangeRuleAbstract
      * @return boolean <b>True</b> if the period obeys the rule, <b>false</b> if not.
      * @throws Exception If the range lower and upper values are not integers.
      */
-    public function obeys(PeriodInterface $period)
+    protected function _obeys(PeriodInterface $period)
     {
         // Ensure that range values are DateTimeInterface instances.
         if (!is_int($this->getLower()) || !is_int($this->getUpper()) ) {
