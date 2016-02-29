@@ -2,6 +2,8 @@
 
 namespace Aventura\Diary\Bookable\Availability\Timetable\Rule;
 
+use \Aventura\Diary\DateTime\Period\PeriodInterface;
+
 /**
  * RangeRuleAbstract
  *
@@ -157,10 +159,10 @@ abstract class RangeRuleAbstract implements RuleInterface
     /**
      * {@inheritdoc}
      * 
-     * @param \Aventura\Diary\DateTime\Period\PeriodInterface $period The period to check.
+     * @param PeriodInterface $period The period to check.
      * @return boolean <b>True</b> if the period obeys the rule, <b>false</b> if not.
      */
-    public function obeys(\Aventura\Diary\DateTime\Period\PeriodInterface $period)
+    public function obeys(PeriodInterface $period)
     {
         return $this->_obeys($period) && !$this->isNegated();
     }
@@ -168,6 +170,6 @@ abstract class RangeRuleAbstract implements RuleInterface
     /**
      * Internal obeys method for overriding by subclasses.
      */
-    abstract protected function _obeys(\Aventura\Diary\DateTime\Period\PeriodInterface $period);
+    abstract protected function _obeys(PeriodInterface $period);
 
 }

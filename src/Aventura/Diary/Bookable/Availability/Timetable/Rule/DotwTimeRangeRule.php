@@ -2,6 +2,8 @@
 
 namespace Aventura\Diary\Bookable\Availability\Timetable\Rule;
 
+use \Aventura\Diary\DateTime\Period\PeriodInterface;
+
 /**
  * Description of DotwTimeRule
  *

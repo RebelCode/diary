@@ -1,7 +1,7 @@
 <?php
 
-use \Aventura\Diary\Bookable\Availability\Timetable\Rule\DateTimeRangeRule;
-use \Aventura\Diary\Bookable\Availability\Timetable\Rule\RuleInterface;
+use \Aventura\Diary\Bookable\Availability\Timetable\Rule\RangeRuleAbstract;
+use \Aventura\Diary\DateTime\DateTimeInterface;
 use \Aventura\Diary\DateTime\Period\PeriodInterface;
 
 namespace Aventura\Diary\Bookable\Availability\Timetable\Rule;
