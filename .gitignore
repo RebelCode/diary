@@ -1,2 +1,4 @@
-/doc/
-/nbproject/
+/docs/
+/vendor/
+/nbproject/private/
+/test/log/
