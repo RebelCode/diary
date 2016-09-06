@@ -1,0 +1,11 @@
+title: "Diary Documentation"
+destination: ./docs/
+source:
+    - ./src/
+accessLevels:
+    - private
+    - protected
+    - public
+deprecated: true
+todo: true
+tree: true
