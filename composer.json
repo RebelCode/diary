@@ -1,2 +1,23 @@
 {
+    "name": "rebelcode/diary",
+    "description": "A simple bookings library.",
+    "type": "library",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "RebelCode Ltd",
+            "email": "development@rebelcode.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.9"
+    },
+    "autoload": {
+        "psr-4": {"Aventura\\Diary\\": "src"}
+    },
+    "autoload-dev": {
+        "psr-4": {"Aventura\\Diary\\": "test/unit"}
+    },
+    "config": {},
+    "repositories": []
 }
