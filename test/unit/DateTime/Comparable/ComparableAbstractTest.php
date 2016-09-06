@@ -1,7 +1,7 @@
 <?php
 namespace Aventura\Diary\DateTime\Comparable;
 
-use \Aventura\Diary\Testing\DateTime\Comparable\ComparableMock;
+use \Aventura\Diary\Testing\DateTime\Comparable\ComparableAbstractMock;
 use \PHPUnit_Framework_TestCase;
 
 /**
@@ -25,8 +25,8 @@ class ComparableAbstractTest extends PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->p1 = new ComparableMock(0);
-        $this->p2 = new ComparableMock(0);
+        $this->p1 = new ComparableAbstractMock(0);
+        $this->p2 = new ComparableAbstractMock(0);
     }
 
     /**

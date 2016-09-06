@@ -44,7 +44,7 @@ class PeriodAbstractMock extends PeriodAbstract
 
     public function getDuration()
     {
-        $seconds = $this->end->copy()->minus($this->start);
+        $seconds = $this->end->copy()->minus($this->start)->getTimestamp();
         return new Duration($seconds + 1);
     }
 

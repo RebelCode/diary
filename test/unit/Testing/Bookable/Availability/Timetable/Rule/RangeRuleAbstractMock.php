@@ -3,6 +3,7 @@
 namespace Aventura\Diary\Testing\Bookable\Availability\Timetable\Rule;
 
 use \Aventura\Diary\Bookable\Availability\Timetable\Rule\RangeRuleAbstract;
+use \Aventura\Diary\DateTime\Period\PeriodInterface;
 
 /**
  * Used for testing RangeRuleAbstract
@@ -19,10 +20,10 @@ class RangeRuleAbstractMock extends RangeRuleAbstract
                 ->setLowerInclusive(false)
                 ->setUpperInclusive(false);
     }
-    
-    public function obeys(\Aventura\Diary\DateTime\Period\PeriodInterface $period)
+
+    protected function _obeys(PeriodInterface $period)
     {
-        
+
     }
 
 }

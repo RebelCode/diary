@@ -45,4 +45,19 @@ class DateTimeAbstractMock extends DateTimeAbstract
         return $this;
     }
 
+    public function format($format)
+    {
+        
+    }
+
+    public function getDate()
+    {
+        
+    }
+
+    public function getTime()
+    {
+
+    }
+
 }
