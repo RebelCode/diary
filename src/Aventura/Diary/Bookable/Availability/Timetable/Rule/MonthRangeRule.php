@@ -2,6 +2,7 @@
 
 namespace Aventura\Diary\Bookable\Availability\Timetable\Rule;
 
+use \Aventura\Diary\DateTime\Duration;
 use \Aventura\Diary\DateTime\Period\PeriodInterface;
 
 /**
@@ -23,7 +24,8 @@ class MonthRangeRule extends RangeRuleAbstract
         $this->setLower($lower)
                 ->setUpper($upper)
                 ->setLowerInclusive(true)
-                ->setUpperInclusive(true);
+                ->setUpperInclusive(true)
+                ->setNegation(false);
     }
 
     /**
@@ -32,7 +34,7 @@ class MonthRangeRule extends RangeRuleAbstract
      * @param PeriodInterface $period The period to check.
      * @return boolean <b>True</b> if the period obeys the rule, <b>false</b> otherwise.
      */
-    public function obeys(PeriodInterface $period)
+    protected function _obeys(PeriodInterface $period)
     {
         $m1 = $this->getLower();
         $m2 = $this->getUpper();
@@ -54,8 +56,8 @@ class MonthRangeRule extends RangeRuleAbstract
             if (!$obeys) {
                 return false;
             }
-            // Increment by 1 month
-            $c->plus(Duration::months(1));
+            // Increment by 1 week
+            $c->plus(Duration::weeks(1));
         }
         return true;
     }

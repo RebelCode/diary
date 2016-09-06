@@ -2,20 +2,15 @@
 
 namespace Aventura\Diary\Bookable\Availability\Timetable\Rule;
 
+use \Aventura\Diary\DateTime\Period\PeriodInterface;
+
 /**
  * Description of DotwTimeRule
  *
  * @author Miguel Muscat <miguelmuscat93@gmail.com>
  */
-class DotwTimeRangeRule implements RuleInterface
+class DotwTimeRangeRule extends TimeRangeRule
 {
-    
-    /**
-     * The time range rule.
-     * 
-     * @var TimeRangeRule
-     */
-    protected $_timeRangeRule;
     
     /**
      * The dotw range rule.
@@ -30,7 +25,7 @@ class DotwTimeRangeRule implements RuleInterface
     public function __construct($dotwLower, $dotwUpper, $timeLower, $timeUpper)
     {
         $this->_dotwRangeRule = new DotwRangeRule($dotwLower, $dotwUpper);
-        $this->_timeRangeRule = new TimeRangeRule($timeLower, $timeUpper);
+        parent::__construct($timeLower, $timeUpper);
     }
 
     /**
@@ -44,15 +39,17 @@ class DotwTimeRangeRule implements RuleInterface
     }
     
     /**
-     * Gets the time range rule
+     * Sets the negation for this rule.
      * 
-     * @return TimeRangeRule The time range rule.
+     * @param boolean $negation <b>True</b> to negate the rule, <b>false</b> for not negation.
      */
-    public function getTimeRangeRule()
+    public function setNegation($negation)
     {
-        return $this->_timeRangeRule;
+        parent::setNegation($negation);
+        $this->getDotwRangeRule()->setNegation($negation);
+        return $this;
     }
-
+    
     /**
      * {@inheritdoc}
      * 
@@ -61,8 +58,7 @@ class DotwTimeRangeRule implements RuleInterface
      */
     public function obeys(PeriodInterface $period)
     {
-        return $this->getDotwRangeRule()->obeys($period) &&
-                $this->getTimeRangeRule()->obeys($period);
+        return parent::obeys($period) && $this->getDotwRangeRule()->obeys($period);
     }
 
 }
