@@ -1,11 +1,12 @@
-title: "Diary Documentation"
-destination: ./docs/
+title: "Diary Developer Docs"
+destination: ./docs/dev
 source:
     - ./src/
 accessLevels:
     - private
     - protected
     - public
+internal: true
 deprecated: true
 todo: true
 tree: true

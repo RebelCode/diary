@@ -1,0 +1,6 @@
+title: "Diary Public Docs"
+destination: ./docs/public
+source:
+    - ./src/
+accessLevels:
+    - public
