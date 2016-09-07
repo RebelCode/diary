@@ -18,6 +18,8 @@
     "autoload-dev": {
         "psr-4": {"Aventura\\Diary\\": "test/unit"}
     },
-    "config": {},
+    "config": {
+        "bin-dir": "bin"
+    },
     "repositories": []
 }
