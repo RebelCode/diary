@@ -12,6 +12,10 @@
     "require": {
         "php": ">=5.3.9"
     },
+    "require-dev": {
+        "apigen/apigen": "^4.1",
+        "phing/phing": "^2.14"
+    },
     "autoload": {
         "psr-4": {"Aventura\\Diary\\": "src"}
     },
