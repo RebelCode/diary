@@ -218,4 +218,68 @@ class TimeRangeRuleTest extends PHPUnit_Framework_TestCase
         $this->assertTrue($this->object->obeys($period));
     }
 
+    /**
+     * @covers Aventura\Diary\Bookable\Availability\Timetable\Rule\TimeRangeRule::obeys
+     */
+    public function testAbnormalLowerNegative()
+    {
+        // 22:00 31/Dec/1969
+        $this->object->setLower(new DateTime(-7200));
+        // 15:00 1/Jan/1970
+        $this->object->setUpper(DateTime::fromString('15:00', 0));
+
+        $period = new DateTime\Period(DateTime::fromString('23:00:00'), Duration::hours(1));
+        
+        $this->assertTrue($this->object->obeys($period),
+            sprintf('Period {%s} should obey {%s | %s}', $period, $this->object->getLower(), $this->object->getUpper()));
+    }
+
+    /**
+     * @covers Aventura\Diary\Bookable\Availability\Timetable\Rule\TimeRangeRule::obeys
+     */
+    public function testAbnormalLowerNegativeFalse()
+    {
+        // 22:00 31/Dec/1969
+        $this->object->setLower(new DateTime(-7200));
+        // 15:00 1/Jan/1970
+        $this->object->setUpper(DateTime::fromString('15:00', 0));
+
+        $period = new DateTime\Period(DateTime::fromString('18:00:00'), Duration::hours(1));
+
+        $this->assertFalse($this->object->obeys($period),
+            sprintf('Period {%s} should obey {%s | %s}', $period, $this->object->getLower(), $this->object->getUpper()));
+    }
+
+    /**
+     * @covers Aventura\Diary\Bookable\Availability\Timetable\Rule\TimeRangeRule::obeys
+     */
+    public function testAbnormalUpperOverflow()
+    {
+        // 14:00 1/Jan/1970
+        $this->object->setLower(DateTime::fromString('14:00'));
+        // 04:00 2/Jan/1970
+        $this->object->setUpper(new DateTime(100,800));
+
+        $period = new DateTime\Period(DateTime::fromString('19:00:00'), Duration::hours(1));
+
+        $this->assertTrue($this->object->obeys($period),
+            sprintf('Period {%s} should obey {%s | %s}', $period, $this->object->getLower(), $this->object->getUpper()));
+    }
+
+    /**
+     * @covers Aventura\Diary\Bookable\Availability\Timetable\Rule\TimeRangeRule::obeys
+     */
+    public function testAbnormalUpperOverflowFalse()
+    {
+        // 14:00 1/Jan/1970
+        $this->object->setLower(DateTime::fromString('14:00'));
+        // 04:00 2/Jan/1970
+        $this->object->setUpper(new DateTime(100,800));
+
+        $period = new DateTime\Period(DateTime::fromString('10:00:00'), Duration::hours(1));
+
+        $this->assertFalse($this->object->obeys($period),
+            sprintf('Period {%s} should obey {%s | %s}', $period, $this->object->getLower(), $this->object->getUpper()));
+    }
+
 }

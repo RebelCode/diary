@@ -2,8 +2,11 @@
 
 namespace Aventura\Diary\Bookable\Availability\Timetable\Rule;
 
+use \Aventura\Diary\DateTime;
 use \Aventura\Diary\DateTime\DateTimeInterface;
+use \Aventura\Diary\DateTime\Duration;
 use \Aventura\Diary\DateTime\Period\PeriodInterface;
+use \Exception;
 
 /**
  * TimeRangeRule
@@ -43,23 +46,48 @@ class TimeRangeRule extends RangeRuleAbstract
             throw new Exception('Invalid range values! TimeRangeRule must have DateTimeInterface range values.');
         }
 
-        // Prepare vars
-        $lower = $this->getLower();
-        $upper = $this->getUpper();
-        $periodStart = $period->getStart();
-        $periodEnd = $period->getEnd();
-        
-        // Check if the period is in the range
-        $inRange = $periodStart->getTime()->isAfter($lower, $this->isLowerInclusive()) &&
-                $periodEnd->getTime()->isBefore($upper, $this->isUpperInclusive());
-        
-        // If the start time is before the end time, the period must also be on the same day
-        if ($lower->isBefore($upper)) {
-            return $inRange && $periodStart->getDate()->isEqualTo($periodEnd->getDate());
+        // Get rule bounds, clamped
+        $lower = $this->clampTime($this->getLower());
+        $upper = $this->clampTime($this->getUpper());
+        // Get the period start and end.
+        // The start is normalized with time only, end is calculated with the duration added to the new start.
+        // We manually compute the end time instead of using $period->getEnd()->getTime() since if getTime() would only
+        // give us the time portion whereas manual calculation allows the period end to overflow to the day after unix epoch.
+        // Ex. [start = 22:00, end = 02:00]
+        $periodStart = $period->getStart()->getTime();
+        $periodEnd = $periodStart->copy()->plus($period->getDuration())->minus(Duration::seconds(1));
+        // Inclusive flags
+        $loInc = $this->isLowerInclusive();
+        $upInc = $this->isUpperInclusive();
+
+        // If standard range: lower is before upper, do a simple compare
+        if ($upper->isAfter($lower)) {
+            $inRange = $periodStart->isAfter($lower, $loInc) &&
+                $periodEnd->isBefore($upper, $upInc);
+        } else {
+            // Otherwise, is upper is before lower, do complex compare
+            $inRange = ($periodStart->isBefore($upper, $upInc) && $periodEnd->isBefore($upper, $upInc)) ||
+                ($periodStart->isAfter($lower, $loInc) && $periodEnd->isAfter($lower, $loInc));
         }
-        
+
         // Otherwise, if the end time is before the start time, the initial inRange check will suffice
         return $inRange;
+    }
+
+    /**
+     * Clamps a datetime instance to ensure if lies between 00:00:00 and 23:59:59
+     *
+     * @param DateTimeInterface $datetime The instance.
+     * @return DateTime The instance with clamped time.
+     */
+    public function clampTime(DateTimeInterface $datetime)
+    {
+        $seconds = $datetime->getTimestamp();
+        $divisor = Duration::days(1, false);
+        if ($seconds < 0) {
+            $seconds = $seconds + abs($divisor);
+        }
+        return new DateTime($seconds % $divisor);
     }
 
 }
