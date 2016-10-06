@@ -23,6 +23,6 @@ abstract class Month extends Enum
     const SEPTEMBER = 9;
     const OCTOBER = 10;
     const NOVEMBER = 11;
-    const DECEMEBER = 12;
+    const DECEMBER = 12;
 
 }
