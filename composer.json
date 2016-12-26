@@ -9,12 +9,16 @@
             "email": "dev@rebelcode.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.9"
+        "php": "^5.3.9 | ^7.0"
     },
     "require-dev": {
         "apigen/apigen": "^4.1",
-        "phing/phing": "^2.14"
+        "phing/phing": "^2.14",
+        "phpunit/phpunit": "^4.8",
+        "ptrofimov/xpmock": "^1.1",
+        "dhii/php-cs-fixer-config": "dev-php-5.3"
     },
     "autoload": {
         "psr-4": {"Aventura\\Diary\\": "src"}
