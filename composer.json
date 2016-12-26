@@ -21,7 +21,9 @@
         "dhii/php-cs-fixer-config": "dev-php-5.3"
     },
     "autoload": {
-        "psr-4": {"Aventura\\Diary\\": "src"}
+        "psr-4": {
+            "\\RebelCode\\Diary\\": "src/"
+        }
     },
     "config": {
         "bin-dir": "bin"
