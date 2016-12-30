@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "\\RebelCode\\Diary\\": "src/"
+            "RebelCode\\Diary\\": "src/"
         }
     },
     "repositories": [
