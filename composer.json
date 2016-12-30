@@ -16,8 +16,6 @@
         "nesbot/carbon": "^1.21"
     },
     "require-dev": {
-        "apigen/apigen": "^4.1",
-        "phing/phing": "^2.14",
         "phpunit/phpunit": "^4.8",
         "ptrofimov/xpmock": "^1.1",
         "dhii/php-cs-fixer-config": "dev-php-5.3"
