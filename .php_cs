@@ -24,5 +24,6 @@ foreach ($toAdd as $_fixer) {
 
 $config->fixers($fixers);
 $config->getFinder()->in(__DIR__.DIRECTORY_SEPARATOR.'src');
-$config->getFinder()->in(__DIR__.DIRECTORY_SEPARATOR.'test');
+$config->getFinder()->in(__DIR__.DIRECTORY_SEPARATOR.'test'.DIRECTORY_SEPARATOR.'unit');
+$config->getFinder()->in(__DIR__.DIRECTORY_SEPARATOR.'test'.DIRECTORY_SEPARATOR.'functional');
 return $config;
