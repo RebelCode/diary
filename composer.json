@@ -13,7 +13,8 @@
     "require": {
         "php": "^5.3.9 | ^7.0",
         "rebelcode/diary-interface": "dev-master",
-        "nesbot/carbon": "^1.21"
+        "nesbot/carbon": "^1.21",
+        "dhii/espresso": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
@@ -26,6 +27,10 @@
         }
     },
     "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Dhii/espresso"
+        },
         {
             "type": "vcs",
             "url": "https://github.com/Dhii/espresso-boolean-expression-interface"

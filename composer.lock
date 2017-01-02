@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6747e951cd70f067fb8ea2f44aa4bc5d",
-    "content-hash": "d23942a28994cb636be486452cd3f68e",
+    "hash": "3342f49cad39bb2858bb57503ad278f3",
+    "content-hash": "5b19e3739e2c78dc31ad39ed5beb180e",
     "packages": [
         {
             "name": "dhii/data-key-value-aware-interface",
@@ -48,6 +48,51 @@
                 "issues": "https://github.com/Dhii/data-key-value-aware-interface/issues"
             },
             "time": "2016-11-26 19:07:12"
+        },
+        {
+            "name": "dhii/espresso",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dhii/espresso.git",
+                "reference": "d2d3816561d704eef4e88db28f6b11148a878f7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dhii/espresso/zipball/d2d3816561d704eef4e88db28f6b11148a878f7f",
+                "reference": "d2d3816561d704eef4e88db28f6b11148a878f7f",
+                "shasum": ""
+            },
+            "require": {
+                "dhii/espresso-interface": "dev-master",
+                "php": "^5.3.9 | ^7.0"
+            },
+            "require-dev": {
+                "dhii/php-cs-fixer-config": "dev-php-5.3",
+                "phpunit/phpunit": "^4.8",
+                "ptrofimov/xpmock": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dhii\\Espresso\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miguel Muscat",
+                    "email": "miguelmuscat93@gmail.com"
+                }
+            ],
+            "description": "A PHP expression builder and evaluation library.",
+            "support": {
+                "source": "https://github.com/Dhii/espresso/tree/master",
+                "issues": "https://github.com/Dhii/espresso/issues"
+            },
+            "time": "2016-12-27 14:37:55"
         },
         {
             "name": "dhii/espresso-boolean-expression-interface",
@@ -1918,6 +1963,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "rebelcode/diary-interface": 20,
+        "dhii/espresso": 20,
         "dhii/php-cs-fixer-config": 20
     },
     "prefer-stable": false,
