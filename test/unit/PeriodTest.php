@@ -347,12 +347,6 @@ class PeriodTest extends TestCase
         $this->assertTrue($this->instance->isEqualTo($copy));
     }
 
-    /*
-     *   ┌────┐    this instance
-     * ----------  timeline
-     *   └────┘    other instance
-     */
-
     /**
      * Tests the period collision method with the following scenario:.
      *
@@ -362,8 +356,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodBefore()
     {
@@ -385,8 +378,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartBeforeEndTouch()
     {
@@ -408,8 +400,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartBeforeEndInRange()
     {
@@ -431,8 +422,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartEqualEndInRange()
     {
@@ -454,8 +444,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartInRangeEndInRange()
     {
@@ -477,8 +466,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartInRangeEndEqual()
     {
@@ -500,8 +488,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartInRangeEndAfter()
     {
@@ -523,8 +510,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartTouchEndAfter()
     {
@@ -546,8 +532,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodAfter()
     {
@@ -569,8 +554,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartBeforeEndEqual()
     {
@@ -592,8 +576,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartEqualEndAfter()
     {
@@ -615,8 +598,7 @@ class PeriodTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodStartBeforeEndAfter()
     {
@@ -632,14 +614,13 @@ class PeriodTest extends TestCase
     /**
      * Tests the period collision method with the following scenario:.
      *
-     *     ┌───┐     this instance
+     *  ┌─────────┐   this instance
      * -------------
      *  └─────────┘   other instance
      *
      * @since [*next-version*]
      *
-     * @covers \RebelCode\Diary\Period::copy
-     * @covers \RebelCode\Diary\Period::createCopy
+     * @covers \RebelCode\Diary\Period::collidesWith
      */
     public function testCollidesWithPeriodEqual()
     {
