@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Diary;
+namespace RebelCode\Diary\DateTime;
 
 use Carbon\Carbon;
 
