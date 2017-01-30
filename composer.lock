@@ -4,25 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3342f49cad39bb2858bb57503ad278f3",
-    "content-hash": "5b19e3739e2c78dc31ad39ed5beb180e",
+    "hash": "23ec5663d18de448c9298042715b1974",
+    "content-hash": "b28431fe5687f0d929d3b76509ee6201",
     "packages": [
         {
             "name": "dhii/data-key-value-aware-interface",
-            "version": "dev-master",
+            "version": "v0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/data-key-value-aware-interface.git",
-                "reference": "d33ab79289415afe67ebf98005821459182bbf20"
+                "reference": "220232bc9040fab78a6c039f5a4a5f9542317bdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/data-key-value-aware-interface/zipball/d33ab79289415afe67ebf98005821459182bbf20",
-                "reference": "d33ab79289415afe67ebf98005821459182bbf20",
+                "url": "https://api.github.com/repos/Dhii/data-key-value-aware-interface/zipball/220232bc9040fab78a6c039f5a4a5f9542317bdc",
+                "reference": "220232bc9040fab78a6c039f5a4a5f9542317bdc",
                 "shasum": ""
             },
+            "require": {
+                "php": "^5.3 | ^7.0"
+            },
             "require-dev": {
-                "codeclimate/php-test-reporter": "dev-master",
+                "codeclimate/php-test-reporter": "<=0.3.2",
                 "dhii/php-cs-fixer-config": "dev-php-5.3",
                 "phpunit/phpunit": "4.*",
                 "ptrofimov/xpmock": "^1.1"
@@ -33,6 +36,7 @@
                     "Dhii\\Data\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -42,164 +46,29 @@
                     "email": "development@dhii.co"
                 }
             ],
-            "description": "An interface for value objects",
-            "support": {
-                "source": "https://github.com/Dhii/data-key-value-aware-interface/tree/master",
-                "issues": "https://github.com/Dhii/data-key-value-aware-interface/issues"
-            },
-            "time": "2016-11-26 19:07:12"
-        },
-        {
-            "name": "dhii/espresso",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dhii/espresso.git",
-                "reference": "d2d3816561d704eef4e88db28f6b11148a878f7f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/espresso/zipball/d2d3816561d704eef4e88db28f6b11148a878f7f",
-                "reference": "d2d3816561d704eef4e88db28f6b11148a878f7f",
-                "shasum": ""
-            },
-            "require": {
-                "dhii/espresso-interface": "dev-master",
-                "php": "^5.3.9 | ^7.0"
-            },
-            "require-dev": {
-                "dhii/php-cs-fixer-config": "dev-php-5.3",
-                "phpunit/phpunit": "^4.8",
-                "ptrofimov/xpmock": "^1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dhii\\Espresso\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Miguel Muscat",
-                    "email": "miguelmuscat93@gmail.com"
-                }
-            ],
-            "description": "A PHP expression builder and evaluation library.",
-            "support": {
-                "source": "https://github.com/Dhii/espresso/tree/master",
-                "issues": "https://github.com/Dhii/espresso/issues"
-            },
-            "time": "2016-12-27 14:37:55"
-        },
-        {
-            "name": "dhii/espresso-boolean-expression-interface",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dhii/espresso-boolean-expression-interface.git",
-                "reference": "0ad1f28960f34189d25911dcaab8607f8ad00a72"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/espresso-boolean-expression-interface/zipball/0ad1f28960f34189d25911dcaab8607f8ad00a72",
-                "reference": "0ad1f28960f34189d25911dcaab8607f8ad00a72",
-                "shasum": ""
-            },
-            "require": {
-                "dhii/espresso-interface": "dev-master",
-                "php": "^5.3.9 | ^7.0"
-            },
-            "require-dev": {
-                "dhii/php-cs-fixer-config": "dev-php-5.3",
-                "phpunit/phpunit": "^4.8",
-                "ptrofimov/xpmock": "^1.1"
-            },
-            "type": "libary",
-            "autoload": {
-                "psr-4": {
-                    "Dhii\\Espresso\\": "src/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Dhii",
-                    "email": "development@dhii.co"
-                }
-            ],
-            "description": "Interfaces for Espresso boolean expressions.",
-            "support": {
-                "source": "https://github.com/Dhii/espresso-boolean-expression-interface/tree/master",
-                "issues": "https://github.com/Dhii/espresso-boolean-expression-interface/issues"
-            },
-            "time": "2016-12-24 10:03:13"
-        },
-        {
-            "name": "dhii/espresso-interface",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Dhii/espresso-interface.git",
-                "reference": "280b5601e12e3bcef5e08a39c444232b6065d9c7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/espresso-interface/zipball/280b5601e12e3bcef5e08a39c444232b6065d9c7",
-                "reference": "280b5601e12e3bcef5e08a39c444232b6065d9c7",
-                "shasum": ""
-            },
-            "require": {
-                "dhii/evaluable-interface": "dev-master",
-                "php": "^5.3.9 | ^7.0"
-            },
-            "require-dev": {
-                "dhii/php-cs-fixer-config": "dev-php-5.3",
-                "phpunit/phpunit": "^4.8",
-                "ptrofimov/xpmock": "^1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dhii\\Espresso\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dhii",
-                    "email": "development@dhii.co"
-                }
-            ],
-            "description": "The interfaces for Espresso.",
-            "support": {
-                "source": "https://github.com/Dhii/espresso-interface/tree/master",
-                "issues": "https://github.com/Dhii/espresso-interface/issues"
-            },
-            "time": "2016-12-26 14:49:46"
+            "description": "Interfaces that aim to increase interoperability of value objects",
+            "time": "2017-01-21 17:35:30"
         },
         {
             "name": "dhii/evaluable-interface",
-            "version": "dev-master",
+            "version": "v0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/evaluable-interface.git",
-                "reference": "304dfb73c264f9e192ca95483130f848cb880c97"
+                "reference": "da21c1a22cf0e49d5b05e93937928887657e49ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/evaluable-interface/zipball/304dfb73c264f9e192ca95483130f848cb880c97",
-                "reference": "304dfb73c264f9e192ca95483130f848cb880c97",
+                "url": "https://api.github.com/repos/Dhii/evaluable-interface/zipball/da21c1a22cf0e49d5b05e93937928887657e49ed",
+                "reference": "da21c1a22cf0e49d5b05e93937928887657e49ed",
                 "shasum": ""
             },
             "require": {
-                "dhii/data-key-value-aware-interface": "dev-master",
+                "dhii/data-key-value-aware-interface": "^0.1",
                 "php": "^5.3.9 | ^7.0"
             },
             "require-dev": {
+                "codeclimate/php-test-reporter": "<=0.3.2",
                 "dhii/php-cs-fixer-config": "dev-php-5.3",
                 "phpunit/phpunit": "^4.8",
                 "ptrofimov/xpmock": "^1.1"
@@ -210,21 +79,147 @@
                     "Dhii\\Evaluable\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Dhii",
+                    "name": "Dhii Team",
                     "email": "development@dhii.co"
                 }
             ],
-            "description": "An interface for an object that can be evaluated.",
-            "support": {
-                "source": "https://github.com/Dhii/evaluable-interface/tree/master",
-                "issues": "https://github.com/Dhii/evaluable-interface/issues"
+            "description": "Increasing interoperability for objects that can be evaluated",
+            "time": "2017-01-21 18:30:17"
+        },
+        {
+            "name": "dhii/expression-interface",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dhii/expression-interface.git",
+                "reference": "ac1fb00c039fb33ed9476a0f141072b8b3adb6c5"
             },
-            "time": "2016-12-26 15:25:15"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dhii/expression-interface/zipball/ac1fb00c039fb33ed9476a0f141072b8b3adb6c5",
+                "reference": "ac1fb00c039fb33ed9476a0f141072b8b3adb6c5",
+                "shasum": ""
+            },
+            "require": {
+                "dhii/evaluable-interface": "^0.1",
+                "php": "^5.3 | ^7.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "<=0.3.2",
+                "dhii/php-cs-fixer-config": "dev-php-5.3",
+                "phpunit/phpunit": "^4.8",
+                "ptrofimov/xpmock": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dhii\\Expression\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dhii Team",
+                    "email": "development@dhii.co"
+                }
+            ],
+            "description": "Interoperable interfaces for representing expressions.",
+            "time": "2017-01-23 14:04:21"
+        },
+        {
+            "name": "dhii/storage-interface",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dhii/storage-interface.git",
+                "reference": "816f697f9524ee0f3a2b54367b559172145da7eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dhii/storage-interface/zipball/816f697f9524ee0f3a2b54367b559172145da7eb",
+                "reference": "816f697f9524ee0f3a2b54367b559172145da7eb",
+                "shasum": ""
+            },
+            "require": {
+                "dhii/expression-interface": "^0.1",
+                "dhii/stringable-interface": "^0.1",
+                "php": "^5.3.9 | ^7.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "<=0.3.2",
+                "dhii/php-cs-fixer-config": "dev-php-5.3",
+                "phpunit/phpunit": "4.*",
+                "ptrofimov/xpmock": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dhii\\Storage\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dhii Team",
+                    "email": "development@dhii.co"
+                }
+            ],
+            "description": "A set of interfaces for generic storage abstraction.",
+            "time": "2017-01-24 10:57:15"
+        },
+        {
+            "name": "dhii/stringable-interface",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dhii/stringable-interface.git",
+                "reference": "b6653905eef2ebf377749feb80a6d18abbe913ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dhii/stringable-interface/zipball/b6653905eef2ebf377749feb80a6d18abbe913ef",
+                "reference": "b6653905eef2ebf377749feb80a6d18abbe913ef",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3 | ^7.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "<=0.3.2",
+                "dhii/php-cs-fixer-config": "dev-php-5.3",
+                "phpunit/phpunit": "^4.8",
+                "ptrofimov/xpmock": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dhii\\Util\\String\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dhii Team",
+                    "email": "development@dhii.co"
+                }
+            ],
+            "description": "Interoperability interface for objects that can be cast to string",
+            "time": "2017-01-23 15:08:20"
         },
         {
             "name": "nesbot/carbon",
@@ -232,27 +227,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "0f87ca78d68298615068b08ce6c1b72c6ed86a49"
+                "reference": "bad923c3253231bf03153447e8052bfe2f1e38ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/0f87ca78d68298615068b08ce6c1b72c6ed86a49",
-                "reference": "0f87ca78d68298615068b08ce6c1b72c6ed86a49",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bad923c3253231bf03153447e8052bfe2f1e38ef",
+                "reference": "bad923c3253231bf03153447e8052bfe2f1e38ef",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
-                "symfony/translation": "~2.6|~3.0"
+                "symfony/translation": "~2.6 || ~3.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "~1.11",
-                "phpunit/phpunit": "~4.0|~5.0",
-                "sllh/php-cs-fixer-styleci-bridge": "^2.1"
+                "friendsofphp/php-cs-fixer": "~2",
+                "phpunit/phpunit": "~4.0 || ~5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.22-dev"
+                    "dev-master": "1.23-dev"
                 }
             },
             "autoload": {
@@ -278,28 +272,28 @@
                 "datetime",
                 "time"
             ],
-            "time": "2016-12-02 15:58:32"
+            "time": "2017-01-24 12:56:16"
         },
         {
             "name": "rebelcode/diary-interface",
-            "version": "dev-master",
+            "version": "dev-release/0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RebelCodecom/diary-interface.git",
-                "reference": "6bb052776a8a57c6e7855c06847938a9f56e0cae"
+                "reference": "c4a67bc6ff381c69cefc0e8e2d797e675337a5ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RebelCodecom/diary-interface/zipball/6bb052776a8a57c6e7855c06847938a9f56e0cae",
-                "reference": "6bb052776a8a57c6e7855c06847938a9f56e0cae",
+                "url": "https://api.github.com/repos/RebelCodecom/diary-interface/zipball/c4a67bc6ff381c69cefc0e8e2d797e675337a5ea",
+                "reference": "c4a67bc6ff381c69cefc0e8e2d797e675337a5ea",
                 "shasum": ""
             },
             "require": {
-                "dhii/espresso-boolean-expression-interface": "dev-master",
+                "dhii/storage-interface": "^0.1",
                 "php": "^5.3 | ^7.0"
             },
             "require-dev": {
-                "codeclimate/php-test-reporter": "^0.3.2",
+                "codeclimate/php-test-reporter": "<=0.3.2",
                 "dhii/php-cs-fixer-config": "dev-php-5.3",
                 "phpunit/phpunit": "~4.0",
                 "ptrofimov/xpmock": "^1.1"
@@ -321,7 +315,7 @@
                 }
             ],
             "description": "Interfaces for the objects used by the Diary library.",
-            "time": "2016-12-30 12:42:28"
+            "time": "2017-01-27 11:22:05"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -388,12 +382,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "755e47ef1d412c53afd686e560066668186fe3ac"
+                "reference": "c281ac2b484210bb95106bdb8ae8356e63277725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/755e47ef1d412c53afd686e560066668186fe3ac",
-                "reference": "755e47ef1d412c53afd686e560066668186fe3ac",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/c281ac2b484210bb95106bdb8ae8356e63277725",
+                "reference": "c281ac2b484210bb95106bdb8ae8356e63277725",
                 "shasum": ""
             },
             "require": {
@@ -444,7 +438,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-27 10:39:57"
+            "time": "2017-01-21 16:59:38"
         }
     ],
     "packages-dev": [
@@ -494,12 +488,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "416fb8ad1d095a87f1d21bc40711843cd122fd4a"
+                "reference": "68099b02b60bbf3b088ff5cb67bf506770ef9cac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/416fb8ad1d095a87f1d21bc40711843cd122fd4a",
-                "reference": "416fb8ad1d095a87f1d21bc40711843cd122fd4a",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/68099b02b60bbf3b088ff5cb67bf506770ef9cac",
+                "reference": "68099b02b60bbf3b088ff5cb67bf506770ef9cac",
                 "shasum": ""
             },
             "require": {
@@ -540,7 +534,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2016-03-31 10:24:22"
+            "time": "2017-01-23 09:23:06"
         },
         {
             "name": "friendsofphp/php-cs-fixer",
@@ -961,12 +955,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "9d2b62b40d24124d46ec35d5997793a226bba07e"
+                "reference": "7eb45205d27edd94bd2b3614085ea158bd1e2bca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9d2b62b40d24124d46ec35d5997793a226bba07e",
-                "reference": "9d2b62b40d24124d46ec35d5997793a226bba07e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7eb45205d27edd94bd2b3614085ea158bd1e2bca",
+                "reference": "7eb45205d27edd94bd2b3614085ea158bd1e2bca",
                 "shasum": ""
             },
             "require": {
@@ -1025,7 +1019,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-29 06:26:25"
+            "time": "2017-01-26 16:15:36"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1541,12 +1535,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "17e6f90eab15f45ae5955d7cfdb8687c7688146e"
+                "reference": "2e18b8903d9c498ba02e1dfa73f64d4894bb6912"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/17e6f90eab15f45ae5955d7cfdb8687c7688146e",
-                "reference": "17e6f90eab15f45ae5955d7cfdb8687c7688146e",
+                "url": "https://api.github.com/repos/symfony/console/zipball/2e18b8903d9c498ba02e1dfa73f64d4894bb6912",
+                "reference": "2e18b8903d9c498ba02e1dfa73f64d4894bb6912",
                 "shasum": ""
             },
             "require": {
@@ -1594,7 +1588,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-29 21:47:05"
+            "time": "2017-01-08 20:43:03"
         },
         {
             "name": "symfony/debug",
@@ -1602,12 +1596,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "0c4933bda12eaf3fb985d03ac46d8b28507024ec"
+                "reference": "b58c5193eb47dc960961574970d53df13d1afcb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/0c4933bda12eaf3fb985d03ac46d8b28507024ec",
-                "reference": "0c4933bda12eaf3fb985d03ac46d8b28507024ec",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/b58c5193eb47dc960961574970d53df13d1afcb8",
+                "reference": "b58c5193eb47dc960961574970d53df13d1afcb8",
                 "shasum": ""
             },
             "require": {
@@ -1651,7 +1645,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-27 10:39:57"
+            "time": "2017-01-21 16:40:50"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1659,12 +1653,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "47ab31840feed40355e149a1519c1a2dcb797cf0"
+                "reference": "74877977f90fb9c3e46378d5764217c55f32df34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/47ab31840feed40355e149a1519c1a2dcb797cf0",
-                "reference": "47ab31840feed40355e149a1519c1a2dcb797cf0",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/74877977f90fb9c3e46378d5764217c55f32df34",
+                "reference": "74877977f90fb9c3e46378d5764217c55f32df34",
                 "shasum": ""
             },
             "require": {
@@ -1711,7 +1705,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-27 10:39:57"
+            "time": "2017-01-02 20:30:24"
         },
         {
             "name": "symfony/filesystem",
@@ -1719,12 +1713,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "a3784111af9f95f102b6411548376e1ae7c93898"
+                "reference": "5b77d49ab76e5b12743b359ef4b4a712e6f5360d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/a3784111af9f95f102b6411548376e1ae7c93898",
-                "reference": "a3784111af9f95f102b6411548376e1ae7c93898",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/5b77d49ab76e5b12743b359ef4b4a712e6f5360d",
+                "reference": "5b77d49ab76e5b12743b359ef4b4a712e6f5360d",
                 "shasum": ""
             },
             "require": {
@@ -1760,7 +1754,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2016-10-18 04:28:30"
+            "time": "2017-01-08 20:43:03"
         },
         {
             "name": "symfony/finder",
@@ -1768,12 +1762,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "e7062df114ba5771c13ddf748cd486389a4bd605"
+                "reference": "355fccac526522dc5fca8ecf0e62749a149f3b8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/e7062df114ba5771c13ddf748cd486389a4bd605",
-                "reference": "e7062df114ba5771c13ddf748cd486389a4bd605",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/355fccac526522dc5fca8ecf0e62749a149f3b8b",
+                "reference": "355fccac526522dc5fca8ecf0e62749a149f3b8b",
                 "shasum": ""
             },
             "require": {
@@ -1809,7 +1803,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-27 10:39:57"
+            "time": "2017-01-02 20:30:24"
         },
         {
             "name": "symfony/process",
@@ -1817,12 +1811,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "b8824a344b62b7db05df2a609a664cfadbba876b"
+                "reference": "699fe81c8a158753be1be3da4768a2ab69a52aa6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/b8824a344b62b7db05df2a609a664cfadbba876b",
-                "reference": "b8824a344b62b7db05df2a609a664cfadbba876b",
+                "url": "https://api.github.com/repos/symfony/process/zipball/699fe81c8a158753be1be3da4768a2ab69a52aa6",
+                "reference": "699fe81c8a158753be1be3da4768a2ab69a52aa6",
                 "shasum": ""
             },
             "require": {
@@ -1858,7 +1852,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-27 10:39:57"
+            "time": "2017-01-21 16:40:50"
         },
         {
             "name": "symfony/stopwatch",
@@ -1866,12 +1860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "bab02fd6fd8527ad87b6e7f47a4e78bb889bfe9a"
+                "reference": "e8bb9de52febc4ee9922b33b1f04ba5feed457b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/bab02fd6fd8527ad87b6e7f47a4e78bb889bfe9a",
-                "reference": "bab02fd6fd8527ad87b6e7f47a4e78bb889bfe9a",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/e8bb9de52febc4ee9922b33b1f04ba5feed457b8",
+                "reference": "e8bb9de52febc4ee9922b33b1f04ba5feed457b8",
                 "shasum": ""
             },
             "require": {
@@ -1907,7 +1901,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-27 10:52:11"
+            "time": "2017-01-02 20:30:24"
         },
         {
             "name": "symfony/yaml",
@@ -1915,12 +1909,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "befb26a3713c97af90d25dd12e75621ef14d91ff"
+                "reference": "322a8c2dfbca15ad6b1b27e182899f98ec0e0153"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/befb26a3713c97af90d25dd12e75621ef14d91ff",
-                "reference": "befb26a3713c97af90d25dd12e75621ef14d91ff",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/322a8c2dfbca15ad6b1b27e182899f98ec0e0153",
+                "reference": "322a8c2dfbca15ad6b1b27e182899f98ec0e0153",
                 "shasum": ""
             },
             "require": {
@@ -1956,14 +1950,13 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-14 16:15:57"
+            "time": "2017-01-21 16:40:50"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "rebelcode/diary-interface": 20,
-        "dhii/espresso": 20,
         "dhii/php-cs-fixer-config": 20
     },
     "prefer-stable": false,

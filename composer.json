@@ -12,9 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^5.3.9 | ^7.0",
-        "rebelcode/diary-interface": "dev-master",
-        "nesbot/carbon": "^1.21",
-        "dhii/espresso": "dev-master"
+        "rebelcode/diary-interface": "dev-release/0.3",
+        "nesbot/carbon": "^1.21"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
@@ -30,22 +29,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/Dhii/espresso"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/Dhii/espresso-boolean-expression-interface"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/Dhii/espresso-interface.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/Dhii/evaluable-interface.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/Dhii/data-key-value-aware-interface"
         }
     ]
 }
