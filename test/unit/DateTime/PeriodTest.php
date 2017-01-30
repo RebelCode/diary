@@ -24,7 +24,7 @@ class PeriodTest extends TestCase
      * @param DateTimeInterface $start The period start.
      * @param DateTimeInterface $end   The period end.
      *
-     * @return AbstractPeriod The test subject instance.
+     * @return Period The test subject instance.
      */
     public function createInstance(DateTimeInterface $start, DateTimeInterface $end)
     {
