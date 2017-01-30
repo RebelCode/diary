@@ -2,7 +2,7 @@
 
 namespace RebelCode\Diary\Test;
 
-use RebelCode\Diary\DateTime;
+use RebelCode\Diary\DateTime\DateTime;
 use Xpmock\TestCase;
 
 /**
