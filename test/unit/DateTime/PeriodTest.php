@@ -114,4 +114,49 @@ class PeriodTest extends TestCase
 
         $this->assertEquals($expected, $subject->getDuration());
     }
+
+    /**
+     * Tests the duration setter to see if the period's end time is moved correctly.
+     *
+     * @since [*next-version*]
+     */
+    public function testSetDuration()
+    {
+        $subject = $this->createInstance(
+            DateTime::createFromTimestamp(2000),
+            DateTime::createFromTimestamp(5000)
+        );
+
+        $expected = $this->createInstance(
+            DateTime::createFromTimestamp(2000),
+            DateTime::createFromTimestamp(2000 + 4000)
+        );
+
+        $subject->setDuration(4000);
+
+        $this->assertEquals($expected, $subject);
+    }
+
+    /**
+     * Tests the duration setter with the reverse flag set to `true` to see if the period's start
+     * time is moved correctly.
+     *
+     * @since [*next-version*]
+     */
+    public function testSetDurationReverse()
+    {
+        $subject = $this->createInstance(
+            DateTime::createFromTimestamp(2000),
+            DateTime::createFromTimestamp(5000)
+        );
+
+        $expected = $this->createInstance(
+            DateTime::createFromTimestamp(5000 - 4000),
+            DateTime::createFromTimestamp(5000)
+        );
+
+        $subject->setDuration(4000, true);
+
+        $this->assertEquals($expected, $subject);
+    }
 }
