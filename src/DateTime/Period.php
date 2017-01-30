@@ -104,6 +104,32 @@ class Period extends AbstractPeriodUtils implements PeriodInterface
     }
 
     /**
+     * Sets the duration of the period.
+     *
+     * @param int $seconds The duration in seconds.
+     * @param bool $reverse [optional] If true, the period's start time will be moved.
+     *                                 Otherwise, the period's end time will be moved.
+     *                                 Default: false
+     * @return $this This instance.
+     */
+    public function setDuration($seconds, $reverse = false)
+    {
+        if ($reverse) {
+            $this->setStart(DateTime::createFromTimestamp(
+                $this->getEnd()->getTimestamp() - $seconds
+            ));
+
+            return $this;
+        }
+
+        $this->setEnd(DateTime::createFromTimestamp(
+            $this->getStart()->getTimestamp() + $seconds
+        ));
+
+        return $this;
+    }
+
+    /**
      * Compares the period to another instance for equality.
      *
      * Two period instances are considered equal if their start and end DateTime timestamps
