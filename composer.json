@@ -13,6 +13,7 @@
     "require": {
         "php": "^5.3.9 | ^7.0",
         "rebelcode/diary-interface": "dev-release/0.3",
+        "dhii/espresso-logical": "dev-release/0.1",
         "nesbot/carbon": "^1.21"
     },
     "require-dev": {
@@ -28,7 +29,15 @@
     "repositories": [
         {
             "type": "vcs",
+            "url": "https://github.com/Dhii/espresso-abstract"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/Dhii/espresso"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Dhii/espresso-logical"
         }
     ]
 }
