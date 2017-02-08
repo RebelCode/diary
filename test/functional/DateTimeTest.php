@@ -40,8 +40,6 @@ class DateTimeTest extends TestCase
      * Tests the {@see \RebelCode\Diary\DateTime::getTimestamp} method.
      *
      * @since [*next-version*]
-     *
-     * @covers \RebelCode\Diary\DateTime::getTimestamp
      */
     public function testGetTimestamp()
     {
