@@ -22,7 +22,7 @@ class Diary extends AbstractDiary implements DiaryInterface
      */
     public function getStorageAdapter()
     {
-        return $this->storageAdapter;
+        return $this->_getStorageAdapter();
     }
 
     /**
@@ -36,7 +36,7 @@ class Diary extends AbstractDiary implements DiaryInterface
      */
     public function setStorageAdapter(AdapterInterface $storageAdapter)
     {
-        $this->storageAdapter = $storageAdapter;
+        $this->_setStorageAdapter($storageAdapter);
 
         return $this;
     }
