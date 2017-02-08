@@ -2,9 +2,10 @@
 
 namespace RebelCode\Diary;
 
-use Dhii\Storage\AdapterInterface;
-use Dhii\Storage\Query\QueryInterface;
-use Dhii\Storage\ResultSetInterface;
+use \Dhii\Storage\AdapterInterface;
+use \Dhii\Storage\Query\QueryInterface;
+use \RebelCode\Diary\DateTime\DateTime;
+use \RebelCode\Diary\DateTime\Period;
 
 /**
  * Default implementation of the Diary hub class.
@@ -56,9 +57,22 @@ class Diary extends AbstractDiary implements DiaryInterface
      *
      * @since [*next-version*]
      */
-    protected function _dataToBooking(ResultSetInterface $resultSet)
+    protected function _dataToBooking(array $data)
     {
-        return iterator_to_array($resultSet, true);
+        $id      = isset($data['id'])
+            ? $data['id']
+            : 0;
+        $start  = isset($data['start'])
+            ? DateTime::createFromTimestamp($data['start'])
+            : 0;
+        $end  = isset($data['end'])
+            ? DateTime::createFromTimestamp($data['end'])
+            : 0;
+
+        $period  = new Period($start, $end);
+        $booking = new Booking($id, $period);
+
+        return $booking;
     }
 
     /**
