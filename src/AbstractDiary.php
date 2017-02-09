@@ -4,12 +4,15 @@ namespace RebelCode\Diary;
 
 use Dhii\Storage\AdapterInterface;
 use Dhii\Storage\Operation\OperationInterface;
+use Dhii\Storage\Operation\ResultInterface;
 use Dhii\Storage\Query\QueryInterface;
 use Dhii\Storage\ResultSetInterface;
 use RebelCode\Diary\Storage\Changeset;
 use RebelCode\Diary\Storage\ChangesetAwareInterface;
 use RebelCode\Diary\Storage\ChangesetInterface;
 use RebelCode\Diary\Storage\Operation;
+use RebelCode\Diary\Storage\OperationException;
+use RebelCode\Diary\Storage\Query\BookingIdQuery;
 
 /**
  * Abstract implementation for the Diary hub class.
@@ -188,9 +191,9 @@ abstract class AbstractDiary
      * @param OperationInterface $operation The operation.
      * @param QueryInterface     $query     The query.
      *
-     * @throws Storage\OperationException If a problem occurred.
+     * @throws OperationException If a problem occurred.
      *
-     * @return \Dhii\Storage\Operation\ResultInterface The result.
+     * @return ResultInterface The result.
      */
     protected function _query(OperationInterface $operation, QueryInterface $query)
     {
