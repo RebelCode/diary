@@ -60,7 +60,7 @@ class Operation implements OperationInterface
      */
     public function getType()
     {
-        return $this->getType();
+        return $this->type;
     }
 
     /**
