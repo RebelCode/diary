@@ -13,7 +13,6 @@ interface DeleteQueryInterface extends
     Query\QueryInterface,
     Query\ConditionAwareInterface,
     Query\LimitAwareInterface,
-    Query\OffsetAwareInterface,
-    Query\OrderAwareInterface
+    Query\OffsetAwareInterface
 {
 }

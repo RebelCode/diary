@@ -15,7 +15,6 @@ interface ReadQueryInterface extends
     Query\FieldsAwareInterface,
     Query\GroupingAwareInterface,
     Query\LimitAwareInterface,
-    Query\OffsetAwareInterface,
-    Query\OrderAwareInterface
+    Query\OffsetAwareInterface
 {
 }
