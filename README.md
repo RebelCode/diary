@@ -14,7 +14,7 @@ The main API of Diary is composed of CRUD operations:
 ```
 $diary->get($query);
 $diary->insert($booking);
-$diary->update($booking->getChanges());
+$diary->update($booking->getChangeset());
 $diary->delete($query);
 ```
 
